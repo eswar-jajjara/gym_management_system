@@ -1,39 +1,33 @@
+/* static/css/navbar.css */
 :root {
     --primary-blue: #2b4cff;
     --accent-purple: #7c4dff;
     --button-red: #ff4757;
-    --text-dark: #134afd;
-    --bg-light: #f8f9fa;
-}
-
-/* Navbar Styles */
-.navbar {
-    padding: 0 20px;
+    --text-dark: #3815fc;
 }
 
 /* Logo Styles */
 .hexagon-logo {
     width: 40px;
     height: 40px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5px; /* Adjust padding for your logo */
 }
 
 .logo-image {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
+    filter: brightness(0) invert(1); /* Makes the logo white */
 }
 
 /* Navbar Links */
-.navbar-nav {
-    gap: 20px; /* Consistent spacing */
-}
-
 .nav-link {
     font-weight: 500;
-    color: var(--text-dark) !important;
+    padding: 0.5rem 1rem !important;
     transition: all 0.3s ease;
 }
 
@@ -45,18 +39,12 @@
 .btn-danger {
     background-color: var(--button-red) !important;
     border: none;
-    padding: 8px 20px;
     transition: all 0.3s ease;
 }
 
 .btn-danger:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
-}
-
-/* Right Section */
-.d-flex.align-items-center {
-    gap: 20px; /* Adds space between login and button */
 }
 
 /* Mobile Responsiveness */

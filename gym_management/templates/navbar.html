@@ -1,0 +1,52 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+    <div class="container-fluid"> <!-- Changed to container-fluid -->
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+            <div class="hexagon-logo me-2">
+                <img src="{% static 'images/your-logo.png' %}" alt="GymMaster Logo" class="logo-image">
+            </div>
+            <span class="fw-bold text-dark">STRENGTH WAY</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto"> <!-- Changed mx-auto to me-auto -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown">
+                        FEATURES <i class="fas fa-chevron-down ms-1 small"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Classes</a></li>
+                        <li><a class="dropdown-item" href="#">Trainers</a></li>
+                        <li><a class="dropdown-item" href="#">Schedule</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="{% url 'plans' %}">PRICING</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">SUPPORT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">CONTACT</a>
+                </li>
+            </ul>
+
+            <!-- Right Section -->
+            <div class="d-flex align-items-center">
+                <a href="{% url 'login' %}" class="nav-link text-dark me-3">
+                    <i class="fas fa-lock me-2"></i>LOGIN
+                </a>
+                <a href="#" class="btn btn-danger rounded-pill px-4 fw-bold">
+                    GET STARTED
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
-{% load static %}  <!-- Add this line to load the static template tag library -->
+{% load static %}
 
 {% block content %}
-<section class="hero-section text-center text-white py-5" style="background: url(   'static/images/gym-hero.jpg' ) no-repeat center center/cover;">
+<section class="hero-section text-center text-white py-5"
+    style="background: url('{% static "images/gym-hero.jpg" %}') no-repeat center center/cover;">
     <div class="container">
         <h1 class="display-4">Welcome to GymMaster</h1>
         <p class="lead">Your journey to a healthier lifestyle starts here.</p>
@@ -25,38 +26,6 @@
             <div class="col-md-4 text-center">
                 <h3>Group Classes</h3>
                 <p>Join fun and motivating group sessions.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="testimonials-section py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">What Our Members Say</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <p>"Amazing gym with great facilities!"</p>
-                        <p>- John Doe</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <p>"The trainers are very supportive."</p>
-                        <p>- Jane Smith</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <p>"Best decision I ever made!"</p>
-                        <p>- Mike Johnson</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
