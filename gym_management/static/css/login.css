@@ -1,0 +1,185 @@
+/* static/css/login.css */
+:root {
+    --primary-blue: #2b4cff;
+    --accent-purple: #7c4dff;
+    --button-red: #ff4757;
+    --text-dark: #2d3436;
+    --text-light: #ffffff;
+    --background-light: #f8f9fa;
+    --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-light);
+    padding: 20px;
+}
+
+/* Login Box */
+.login-box {
+    background: var(--text-light);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Logo */
+.login-logo .hexagon-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+}
+
+.login-logo h2 {
+    font-size: 24px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.login-logo p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form Styles */
+.login-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.login-form input:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 8px rgba(43, 76, 255, 0.2);
+}
+
+.login-form .btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.login-form .btn-login:hover {
+    background-color: #1a3dff;
+    transform: scale(1.02);
+}
+
+.login-form .btn-login:active {
+    transform: scale(0.98);
+}
+
+.login-form .forgot-password {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: var(--primary-blue);
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color var(--transition-speed) ease;
+}
+
+.login-form .forgot-password:hover {
+    color: var(--accent-purple);
+    text-decoration: underline;
+}
+
+/* Social Login */
+.social-login {
+    margin-top: 30px;
+}
+
+.social-login p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-buttons .btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.social-buttons .btn-social.google {
+    background-color: #ffffff;
+}
+
+.social-buttons .btn-social.facebook {
+    background-color: #1877f2;
+    color: var(--text-light);
+    border-color: #1877f2;
+}
+
+.social-buttons .btn-social:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.social-buttons .btn-social:active {
+    transform: scale(0.95);
+}
+
+/* Sign Up Link */
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-link a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.signup-link a:hover {
+    color: var(--accent-purple);
+    text-decoration: underline;
+}

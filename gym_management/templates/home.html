@@ -3,11 +3,11 @@
 
 {% block content %}
 <section class="hero-section text-center text-white py-5"
-    style="background: url('{% static "images/gym-hero.jpg" %}') no-repeat center center/cover;">
+    style="background: url('{% static "images/gym-hero.jpg" %}') no-repeat center center/cover; min-height: 600px; display: flex; align-items: center; justify-content: center;">
     <div class="container">
         <h1 class="display-4">Welcome to GymMaster</h1>
         <p class="lead">Your journey to a healthier lifestyle starts here.</p>
-        <a class="nav-link" href="{% url 'plans' %}">Plans</a>
+        <a class="btn btn-primary mt-3" href="{% url 'plans' %}">Explore Plans</a>
     </div>
 </section>
 

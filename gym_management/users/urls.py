@@ -1,7 +1,8 @@
 # users/urls.py
 from django.urls import path
-from django.contrib.auth.views import LoginView
+from . import views
 
 urlpatterns = [
-    path('login/', LoginView.as_view(template_name='login.html'), name='login'),
+    path('login/', views.custom_login, name='login'),  # Your existing login view
+    path('register/', views.register, name='register'),  # Add this line
 ]

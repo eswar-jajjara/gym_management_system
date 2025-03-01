@@ -1,9 +1,30 @@
-/* static/css/navbar.css */
+/* Define color variables */
 :root {
     --primary-blue: #2b4cff;
     --accent-purple: #7c4dff;
     --button-red: #ff4757;
     --text-dark: #3815fc;
+    --navbar-bg: #1a1a2e; /* Change this to your desired navbar background color */
+    --navbar-text: #ffffff; /* Change this to your desired text color */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--navbar-bg) !important; /* Set the navbar background color */
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+    color: var(--navbar-text) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-blue) !important; /* Change text color on hover */
 }
 
 /* Logo Styles */
@@ -15,24 +36,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px; /* Adjust padding for your logo */
+    padding: 5px;
 }
 
 .logo-image {
     width: 100%;
     height: auto;
-    filter: brightness(0) invert(1); /* Makes the logo white */
-}
-
-/* Navbar Links */
-.nav-link {
-    font-weight: 500;
-    padding: 0.5rem 1rem !important;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--primary-blue) !important;
+    filter: brightness(0) invert(1);
 }
 
 /* CTA Button */
@@ -60,5 +70,15 @@
     .dropdown-menu {
         border: none;
         box-shadow: none;
+        background-color: var(--navbar-bg);
+    }
+
+    .dropdown-item {
+        color: var(--navbar-text);
+    }
+
+    .dropdown-item:hover {
+        background-color: var(--primary-blue);
+        color: #fff;
     }
 }
