@@ -1,5 +1,7 @@
-# subscriptions/views.py
 from django.shortcuts import render
+from .models import Plan
 
-def plans(request):
-    return render(request, 'plans.html')
+def pricing(request):
+    plans = Plan.objects.all()
+    print(plans)  # Debug: Check terminal output
+    return render(request, 'pricing.html', {'plans': plans})

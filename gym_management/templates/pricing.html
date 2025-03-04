@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/pricing.css' %}">
+
+<div class="pricing-container">
+    <h1>Choose Your Plan</h1>
+    <p class="subtitle">Select the plan that best fits your fitness goals.</p>
+
+    <div class="pricing-plans">
+        {% for plan in plans %}
+        <div class="plan-card">
+            <h2>{{ plan.name }}</h2>
+            <p class="price">${{ plan.price }}<span>/month</span></p>
+            <ul class="features">
+                {% for feature in plan.description.splitlines %}
+                <li>{{ feature }}</li>
+                {% endfor %}
+            </ul>
+            <button class="btn-select-plan">Select Plan</button>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Modal and scripts remain unchanged -->
+{% endblock %}
