@@ -42,7 +42,7 @@
 }
 
 .plan-card.recommended {
-    border: 2px solid #ff4757;
+    border: 2px solid #0036ff;
 }
 
 .recommended-badge {
@@ -50,7 +50,7 @@
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #ff4757;
+    background-color: #0051ff;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 25px;
@@ -67,7 +67,7 @@
 .plan-card .price {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #ff4757;
+    color: #0053ff;
     margin-bottom: 1.5rem;
 }
 
@@ -89,11 +89,11 @@
 }
 
 .plan-card .features li:hover {
-    color: #ff4757;
+    color: #0992ef;
 }
 
 .plan-card .btn-select-plan {
-    background-color: #ff4757;
+    background-color: #3317fa;
     color: #fff;
     padding: 0.8rem 2rem;
     border-radius: 25px;
@@ -105,7 +105,7 @@
 }
 
 .plan-card .btn-select-plan:hover {
-    background-color: #e63946;
+    background-color: #002dff;
 }
 
 /* Modal Styles */
@@ -140,7 +140,7 @@
 }
 
 .btn-submit {
-    background-color: #ff4757;
+    background-color: #1659fd;
     color: #fff;
     padding: 0.8rem 2rem;
     border: none;
@@ -151,7 +151,7 @@
 }
 
 .btn-submit:hover {
-    background-color: #e63946;
+    background-color: #056bff;
 }
 
 /* Responsive Design */
