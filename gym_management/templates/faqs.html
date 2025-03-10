@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}  {# Add this line to load static files #}
+
+{% block title %}FAQs{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/faqs.css' %}">
+
+<div class="support-page">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq">
+        <h3>How do I reset my password?</h3>
+        <p>Go to the login page, click "Forgot Password," and follow the instructions.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Why can't I access my account?</h3>
+        <p>Ensure your credentials are correct. If the issue persists, contact support.</p>
+    </div>
+
+    <div class="faq">
+        <h3>How do I update my profile?</h3>
+        <p>Navigate to the settings page and update your personal information.</p>
+    </div>
+
+    <a href="{% url 'contact_support' %}" class="btn">Need More Help?</a>
+</div>
+
+{% endblock %}

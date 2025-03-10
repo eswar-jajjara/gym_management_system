@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}  {# Load static files #}
+
+{% block title %}Access Control Guide{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/access_control.css' %}">
+
+<div class="support-page">
+    <h1>Access Control Guide</h1>
+    <p>Instructions for troubleshooting access control system issues.</p>
+
+    <div class="guide-section">
+        <h3>How to Reset Access Codes</h3>
+        <p>Navigate to the system settings, select "Access Control," and follow the reset procedure.</p>
+    </div>
+
+    <div class="guide-section">
+        <h3>How to Grant/Revoke Access</h3>
+        <p>Go to the user management section, select the user, and modify their access level.</p>
+    </div>
+
+    <a href="{% url 'contact_support' %}" class="btn">Need More Help?</a>
+</div>
+
+{% endblock %}

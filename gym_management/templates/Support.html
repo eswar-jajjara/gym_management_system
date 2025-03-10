@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/support.css' %}">
+
+    <section class="support-hero">
+        <div class="overlay"></div>
+        <h1>Support Center</h1>
+        <p>We're here to assist you. Explore our resources or contact our support team directly.</p>
+    </section>
+
+    <section class="support-options">
+        <div class="support-option">
+            <img src="{% static 'images/user-manual-icon.png' %}" alt="User Manual">
+            <h2>User Manual</h2>
+            <p>Guides for common tasks in the daily operations of your club.</p>
+            <a href="{% url 'user_manual' %}" class="btn">View Online</a>
+        </div>
+        <div class="support-option">
+            <img src="{% static 'images/faq-icon.png' %}" alt="FAQs">
+            <h2>FAQs</h2>
+            <p>Answers to frequently asked questions and solutions to common issues.</p>
+            <a href="{% url 'faqs' %}" class="btn">Open FAQs</a>
+        </div>
+        <div class="support-option">
+            <img src="{% static 'images/youtube-icon.png' %}" alt="YouTube Videos">
+            <h2>YouTube Videos</h2>
+            <p>Guided walkthroughs and training videos for system setup and usage.</p>
+            <a href="https://www.youtube.com/channel/YourChannelID" class="btn" target="_blank">Watch Now</a>
+        </div>
+        <div class="support-option">
+            <img src="{% static 'images/access-control-icon.png' %}" alt="Access Control">
+            <h2>Access Control</h2>
+            <p>Troubleshooting instructions for various access control system issues.</p>
+            <a href="{% url 'access_control' %}" class="btn">View Guide</a>
+        </div>
+    </section>
+
+    <section class="contact-support">
+        <h2>Contact Support</h2>
+        <p>If you need further assistance, please reach out to our support team.</p>
+        <a href="{% url 'contact_support' %}" class="btn-contact">Contact Us</a>
+    </section>
+{% endblock %}
