@@ -2,28 +2,39 @@
 {% load static %}
 
 {% block content %}
+<!-- Hero Section -->
 <section class="hero-section text-center text-white py-5"
     style="background: url('{% static "images/gym-hero.jpg" %}') no-repeat center center/cover; min-height: 600px; display: flex; align-items: center; justify-content: center;">
     <div class="container">
         <h1 class="display-4">Welcome to StrengthWay</h1>
         <p class="lead">Your journey to a healthier lifestyle starts here.</p>
-        <a class="btn btn-primary mt-3" href="{% url 'pricing' %}">Explore Plans</a>
+        <a class="btn btn-primary btn-lg mt-3" href="{% url 'pricing' %}">Explore Plans</a>
     </div>
 </section>
 
-<section class="features-section py-5">
+<!-- Features Section -->
+<section class="features-section py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-4">Why Choose Us?</h2>
         <div class="row">
             <div class="col-md-4 text-center">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-clock fa-3x text-primary"></i>
+                </div>
                 <h3>24/7 Access</h3>
                 <p>Work out anytime, anywhere.</p>
             </div>
             <div class="col-md-4 text-center">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-dumbbell fa-3x text-primary"></i>
+                </div>
                 <h3>Personal Training</h3>
                 <p>Get personalized coaching from experts.</p>
             </div>
             <div class="col-md-4 text-center">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-users fa-3x text-primary"></i>
+                </div>
                 <h3>Group Classes</h3>
                 <p>Join fun and motivating group sessions.</p>
             </div>
