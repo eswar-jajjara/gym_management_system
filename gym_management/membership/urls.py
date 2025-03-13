@@ -8,6 +8,5 @@ urlpatterns = [
     path('faqs/', views.faqs, name='faqs'),
     path('access-control/', views.access_control, name='access_control'),
     path('contact-support/', views.contact_support, name='contact_support'),  # Add this line
-    path('ai-recommendations/', views.ai_recommendations, name='ai_recommendations'),
-    path('ai-recommendations-api/', views.ai_recommendations_api, name='ai_recommendations_api'),
+    path('gym_ai/', views.gym_ai, name='gym_ai'),
 ]

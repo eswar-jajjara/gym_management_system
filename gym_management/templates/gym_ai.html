@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Link to AI Recommendations CSS -->
+<link rel="stylesheet" href="{% static 'css/gym_ai.css' %}">
+
+<section class="gym-ai">
+    <div class="container">
+        <h1>AI Gym Trainer</h1>
+        <p>Get personalized workout and nutrition plans tailored to your fitness goals.</p>
+
+        <!-- Workout Planner -->
+        <div class="gym-card">
+            <h2><i class="fas fa-dumbbell"></i> Workout Planner</h2>
+            <form id="workoutForm">
+                <div class="form-group">
+                    <label>Primary Goal:</label>
+                    <select class="form-select" id="goal">
+                        <option value="muscle-gain">Muscle Gain</option>
+                        <option value="strength">Strength Building</option>
+                        <option value="weight-loss">Weight Loss</option>
+                        <option value="endurance">Endurance</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Training Level:</label>
+                    <div class="btn-group w-100" role="group">
+                        <button type="button" class="btn btn-outline-primary active" data-level="beginner">Beginner</button>
+                        <button type="button" class="btn btn-outline-primary" data-level="intermediate">Intermediate</button>
+                        <button type="button" class="btn btn-outline-primary" data-level="advanced">Advanced</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Equipment Available:</label>
+                    <select class="form-select" id="equipment">
+                        <option value="full-gym">Full Gym</option>
+                        <option value="home-equipment">Home Equipment</option>
+                        <option value="bodyweight">Bodyweight Only</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-magic"></i> Generate Workout Plan
+                </button>
+            </form>
+
+            <div id="workoutPlan" class="mt-4">
+                <h4>Your Weekly Plan:</h4>
+                <div class="plan-chart">
+                    <canvas id="workoutChart"></canvas>
+                </div>
+                <div id="exerciseList"></div>
+            </div>
+        </div>
+
+        <!-- Nutrition Planner -->
+        <div class="gym-card mt-4">
+            <h2><i class="fas fa-utensils"></i> Nutrition Planner</h2>
+            <form id="dietForm">
+                <div class="form-group">
+                    <label>Calorie Goal:</label>
+                    <input type="number" class="form-control" id="calories" placeholder="Enter daily calories" min="1000" max="5000">
+                </div>
+
+                <div class="form-group">
+                    <label>Dietary Preferences:</label>
+                    <select class="form-select" id="dietType">
+                        <option value="balanced">Balanced</option>
+                        <option value="keto">Keto</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="low-carb">Low Carb</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-magic"></i> Generate Nutrition Plan
+                </button>
+            </form>
+
+            <div id="dietPlan" class="mt-4">
+                <h4>Your Nutrition Plan:</h4>
+                <div class="plan-chart">
+                    <canvas id="nutritionChart"></canvas>
+                </div>
+                <div id="mealPlan"></div>
+            </div>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="gym-card mt-4">
+            <h2><i class="fas fa-chart-line"></i> Progress Tracker</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <canvas id="progressChart"></canvas>
+                </div>
+                <div class="col-md-4">
+                    <div class="progress-stats">
+                        <h5>Performance Metrics</h5>
+                        <ul class="list-group" id="performanceMetrics"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'js/gym_ai.js' %}"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Handle Training Level Buttons
+    const levelButtons = document.querySelectorAll(".btn-group .btn");
+    levelButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            levelButtons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+
+    // Prevent empty calorie submission
+    document.getElementById("dietForm").addEventListener("submit", function (e) {
+        const calories = document.getElementById("calories").value;
+        if (!calories || calories < 1000 || calories > 5000) {
+            alert("Please enter a valid calorie intake between 1000-5000.");
+            e.preventDefault();
+        }
+    });
+});
+</script>
+{% endblock %}

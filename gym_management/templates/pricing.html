@@ -12,7 +12,7 @@
         {% for plan in plans %}
         <div class="plan-card">
             <h2>{{ plan.name }}</h2>
-            <p class="price">${{ plan.price }}<span>/month</span></p>
+            <p class="price">₹{{ plan.price }}<span>/month</span></p>
             <ul class="features">
                 {% for feature in plan.description.splitlines %}
                 <li>{{ feature }}</li>
