@@ -41,6 +41,13 @@ INSTALLED_APPS = [
     'membership',
     'subscriptions',
     'users',
+    'classes',
+    'trainers',
+    'schedule',
+    'admin_portal',
+    'supplements',
+    'equipment',
+    'groups',
 ]
 
 MIDDLEWARE = [

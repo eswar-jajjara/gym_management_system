@@ -1,0 +1,66 @@
+<!-- templates/admin_portal/admin_portal.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 bg-dark text-white p-4">
+            <h4>Admin Controls</h4>
+            <div class="list-group">
+                <a href="#users" class="list-group-item list-group-item-action">User Management</a>
+                <a href="#schedule" class="list-group-item list-group-item-action">Schedule Slots</a>
+                <a href="#discounts" class="list-group-item list-group-item-action">Discounts & Vouchers</a>
+                <a href="#reports" class="list-group-item list-group-item-action">Reports & Analytics</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9">
+            <!-- User Management Section -->
+            <section id="users" class="mb-5">
+                <h3>User Management</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                Basic Members
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <!-- Dynamically populate users -->
+                                {% for user in basic_users %}
+                                <li class="list-group-item">{{ user.name }} - {{ user.membership_type }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Repeat for Premium and VIP -->
+                </div>
+            </section>
+
+            <!-- Schedule Management -->
+            <section id="schedule" class="mb-5">
+                <h3>Schedule Management</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Create New Slot
+                                <button class="btn btn-sm btn-success float-end" data-bs-toggle="modal" data-bs-target="#slotModal">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <!-- Slot creation form -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Modals for Admin Actions -->
+<div class="modal fade" id="slotModal">
+    <!-- Modal content for slot creation -->
+</div>
+{% endblock %}

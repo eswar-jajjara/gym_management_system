@@ -23,28 +23,35 @@
                         FEATURES <i class="fas fa-chevron-down ms-1 small"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Classes</a></li>
-                        <li><a class="dropdown-item" href="#">Trainers</a></li>
-                        <li><a class="dropdown-item" href="#">Schedule</a></li>
+                        <li><a class="dropdown-item" href="{% url 'classes:classes' %}">Classes</a></li>
+                        <li><a class="dropdown-item" href="{% url 'trainers:trainers' %}">Trainers</a></li>
+                        <li><a class="dropdown-item" href="{% url 'schedule:schedule' %}">Schedule</a></li>
+                        {% if user.is_staff %}
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="{% url 'admin_portal:admin_portal' %}">Admin Portal</a></li>
+                        {% endif %}
                     </ul>
                 </li>
 
-                <!-- Pricing Link -->
+                <!-- Additional Links -->
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="{% url 'pricing' %}">PRICING</a>
+                    <a class="nav-link text-dark" href="{% url 'supplements:supplements' %}">SUPPLEMENTS</a>
                 </li>
-
-                <!-- AI Recommendations Link -->
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="{% url 'gym_ai' %}">RECOMMENDATIONS</a>
+                    <a class="nav-link text-dark" href="{% url 'equipment:equipment' %}">EQUIPMENT</a>
                 </li>
-
-                <!-- Support Link -->
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="{% url 'support' %}">SUPPORT</a>
+                    <a class="nav-link text-dark" href="{% url 'groups:groups' %}">GROUPS</a>
                 </li>
-
-                <!-- Contact Link -->
+                <li class="nav-item">
+                      <a class="nav-link text-dark" href="{% url 'pricing' %}">PRICING</a>
+                </li>
+                <li class="nav-item">
+                     <a class="nav-link text-dark" href="{% url 'gym_ai' %}">RECOMMENDATIONS</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link text-dark" href="{% url 'support' %}">SUPPORT</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="#">CONTACT</a>
                 </li>
