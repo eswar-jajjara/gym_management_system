@@ -1,0 +1,67 @@
+<!-- templates/book_a_demo.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container my-5">
+    <div class="row align-items-center">
+        <!-- Left Column: Text Content -->
+        <div class="col-md-6">
+            <h1 class="display-4 fw-bold mb-4">Book a Demo</h1>
+            <p class="lead mb-4">
+                Discover how StrengthWay can transform your gym management. Schedule a demo today and see the power of our platform in action.
+            </p>
+            <ul class="list-unstyled">
+                <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Streamline your operations
+                </li>
+                <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Enhance member experience
+                </li>
+                <li class="mb-3">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Boost your revenue
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Column: Form -->
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body p-4">
+                    <h3 class="card-title mb-4">Schedule Your Demo</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gym-name" class="form-label">Gym Name</label>
+                            <input type="text" class="form-control" id="gym-name" placeholder="Enter your gym name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="time" class="form-label">Preferred Time</label>
+                            <input type="time" class="form-control" id="time" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Book Demo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

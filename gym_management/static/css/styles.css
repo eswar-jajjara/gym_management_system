@@ -75,3 +75,40 @@
     font-size: 1rem;
     color: #666;
 }
+/* static/css/styles.css */
+/* Book a Demo Page Styles */
+.book-a-demo {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.book-a-demo h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.book-a-demo .lead {
+    font-size: 1.25rem;
+    color: #34495e;
+}
+
+.book-a-demo .card {
+    border: none;
+    border-radius: 10px;
+}
+
+.book-a-demo .form-control {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.book-a-demo .btn-primary {
+    background-color: #e74c3c;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.book-a-demo .btn-primary:hover {
+    background-color: #c0392b;
+}

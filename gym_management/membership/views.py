@@ -23,3 +23,7 @@ def contact_support(request):
 
 def gym_ai(request):
     return render(request, 'gym_ai.html')  # If the template is in 'templates/' directly
+
+
+def book_a_demo(request):
+    return render(request, 'book_a_demo.html')
