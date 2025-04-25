@@ -166,3 +166,64 @@
         margin-bottom: 1.5rem;
     }
 }
+/* Pricing cards with Indian-themed colors */
+.pricing-plans {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plan-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card.discounted {
+    border: 2px solid #FF9933; /* Saffron (Indian flag color) */
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #138808; /* Green (Indian flag color) */
+}
+
+.discount-badge {
+    background: #FF9933;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.audience-tags {
+    margin: 10px 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.tag.student { background: #87CEEB; }
+.tag.men { background: #4682B4; color: white; }
+.tag.women { background: #FF69B4; color: white; }
+
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li:before {
+    content: "✓ ";
+    color: #138808;
+}

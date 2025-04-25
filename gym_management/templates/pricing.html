@@ -5,24 +5,35 @@
 <link rel="stylesheet" href="{% static 'css/pricing.css' %}">
 
 <div class="pricing-container">
-    <h1>Choose Your Plan</h1>
-    <p class="subtitle">Select the plan that best fits your fitness goals.</p>
+    <h1>Gym Membership Plans</h1>
+    <p class="subtitle">Affordable options for students, professionals, and families</p>
 
     <div class="pricing-plans">
         {% for plan in plans %}
-        <div class="plan-card">
+        <div class="plan-card {% if plan.discount > 0 %}discounted{% endif %}">
             <h2>{{ plan.name }}</h2>
-            <p class="price">₹{{ plan.price }}<span>/month</span></p>
+            <p class="price">
+                ₹{{ plan.price }}<span>/month</span>
+                {% if plan.discount > 0 %}
+                <span class="discount-badge">{{ plan.discount }}% OFF</span>
+                {% endif %}
+            </p>
+            <p class="duration">{{ plan.duration_months }} months</p>
+
+            <div class="audience-tags">
+                {% if plan.for_students %}<span class="tag student">Students</span>{% endif %}
+                {% if plan.for_men %}<span class="tag men">Men</span>{% endif %}
+                {% if plan.for_women %}<span class="tag women">Women</span>{% endif %}
+            </div>
+
             <ul class="features">
-                {% for feature in plan.description.splitlines %}
-                <li>{{ feature }}</li>
+                {% for benefit in plan.benefits.splitlines %}
+                <li>{{ benefit }}</li>
                 {% endfor %}
             </ul>
-            <button class="btn-select-plan">Select Plan</button>
+            <button class="btn-select-plan">Book Now</button>
         </div>
         {% endfor %}
     </div>
 </div>
-
-<!-- Modal and scripts remain unchanged -->
 {% endblock %}

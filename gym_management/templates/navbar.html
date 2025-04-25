@@ -26,10 +26,10 @@
                         <li><a class="dropdown-item" href="{% url 'classes:classes' %}">Classes</a></li>
                         <li><a class="dropdown-item" href="{% url 'trainers:trainers' %}">Trainers</a></li>
                         <li><a class="dropdown-item" href="{% url 'schedule:schedule' %}">Schedule</a></li>
-                        {% if user.is_staff %}
+
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item text-danger" href="{% url 'admin_portal:admin_portal' %}">Admin Portal</a></li>
-                        {% endif %}
+
                     </ul>
                 </li>
 
